@@ -1,0 +1,248 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Vinyl&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #2f3535;
+  display: block;
+}
+.results-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 15px;
+  column-gap: 15px;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+.header {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+}
+.header h1 {
+  font-size: 65px;
+  padding: 30px;
+}
+.style1 {
+  font-family: "Lobster", cursive;
+  background-color: black;
+  color: yellow;
+  padding: 20px;
+  border-top-left-radius: 13px;
+  border-bottom-right-radius: 13px;
+}
+.style2 {
+  font-family: "Rubik Vinyl", cursive;
+  background-color: yellow;
+  padding: 8px;
+  border-top-right-radius: 13px;
+  border-bottom-right-radius: 13px;
+}
+
+.header p {
+  font-weight: 400;
+  color: yellow;
+  font-family: "Ubuntu", sans-serif;
+  padding-bottom: 10px;
+}
+
+.search-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.search-box {
+  width: 100%;
+  padding: 15px;
+  border-radius: 13px;
+  border: 0;
+  outline: 0;
+  box-shadow: 5px 0 8px #888888;
+  transition: all 0.3s ease-in-out;
+}
+.search-form button {
+  background-color: black;
+  color: yellow;
+  padding: 15px;
+  border: none;
+  border-radius: 13px;
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: 8px;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.search-box:focus {
+  box-shadow: 3px 5px 8px #888888;
+}
+.search-box:hover {
+  box-shadow: 5px 5px 5px #888888;
+}
+input[type="text"] {
+  font-size: 15px;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.card {
+  width: 260px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  color: white;
+  background: #2f3535;
+  font-family: "Raleway", sans-serif;
+  border-radius: 13px 13px 0 0;
+  border: none;
+  outline: none;
+  margin-top: 15px;
+  padding: 5px;
+}
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  border-radius: 13px 13px 0 0; /* top left and right corners are rounded*/
+}
+.card-body {
+  text-align: center;
+}
+.card-title {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 20px;
+}
+.card-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-bottom: 5px;
+  width: 100%;
+  height: 50%;
+  opacity: 0;
+  background-color: black;
+  color: yellow;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  border-radius: 13px;
+  transition: all 0.3s ease-in-out;
+}
+.card-text:hover {
+  opacity: 0.7;
+  height: 100%;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .container-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 15px;
+    column-gap: 15px;
+    margin-top: 20px;
+    justify-content: center;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
+  .container-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 15px;
+    column-gap: 15px;
+    margin-top: 20px;
+    justify-content: center;
+  }
+  .search-form {
+    display: flex;
+    flex-direction: column;
+  }
+  /* .header {
+    width: 350px;
+    align-items: center;
+    justify-content: center;
+  } */
+  .header h1 {
+    font-size: 42px;
+    padding: 30px;
+  }
+  .style1 {
+    font-family: "Lobster", cursive;
+    background-color: black;
+    color: yellow;
+    padding: 8px;
+    border-top-left-radius: 13px;
+    border-bottom-right-radius: 13px;
+  }
+  .style2 {
+    font-family: "Rubik Vinyl", cursive;
+    background-color: yellow;
+    padding: 4px;
+    border-top-right-radius: 13px;
+    border-bottom-right-radius: 13px;
+  }
+
+  .header p {
+    font-weight: 400;
+    color: yellow;
+    font-family: "Ubuntu", sans-serif;
+    padding-bottom: 10px;
+    font-size: 15px;
+  }
+  .search-box {
+    width: 60%;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+  .container-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 15px;
+    column-gap: 15px;
+    margin-top: 20px;
+    justify-content: center;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 992px) {
+  .container-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 15px;
+    column-gap: 15px;
+    margin-top: 20px;
+    justify-content: center;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (max-width: 1200px) {
+}
