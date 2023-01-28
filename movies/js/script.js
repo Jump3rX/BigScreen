@@ -8,7 +8,7 @@ searchBtn.addEventListener("click", function (e) {
   e.preventDefault();
   let movieVal = searchBox.value;
   // console.log(movieVal);
-  fetch(`http://www.omdbapi.com/?apikey=48bc9r928ffytfiy9cf&s=${movieVal}`)
+  fetch(`http://www.omdbapi.com/?apikey=YOUR_API_KEY&s=${movieVal}`)
     .then((res) => {
       return res.json();
     })
